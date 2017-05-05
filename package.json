@@ -1,0 +1,24 @@
+{
+  "name": "tsnodebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc && node lib/index.js",
+    "dev": "concurrently --kill-others \"tsc -w\" \"nodemon ./lib/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "concurrently": "^3.4.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "cli-table-2-json": "^1.0.9"
+  }
+}
