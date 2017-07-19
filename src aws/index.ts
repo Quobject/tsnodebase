@@ -1,6 +1,7 @@
-﻿import * as request from 'request';
+﻿/* tslint:disable:object-literal-sort-keys max-classes-per-file no-console */
 import * as fs from 'fs';
 import * as path from 'path';
+import * as request from 'request';
 
 export class QuizCreateResponse {
   public static FromString(value: string): QuizCreateResponse {
@@ -44,16 +45,13 @@ export class AWSPost {
     const qres = QuizCreateResponse.FromString(s);
     //console.log(response);
 
-  
-  
-
-    return Promise.resolve().then(() => {    
+    return Promise.resolve().then(() => {
       const filename = path.join(__dirname, '..', 'quiz1.quiz');
       console.log(`filename = ${filename}`);
 
       //fs.createReadStream(filename).pipe(process.stdout, { end: false });
 
-      var formData = {
+      const formData = {
         key: `quiz/${qres.quizid}/q.quiz`,
         acl: 'private',
         'Content-Type': 'image/',
@@ -64,7 +62,7 @@ export class AWSPost {
         'X-Amz-Date': `${qres.date}T000000Z`,
         Policy: qres.policy,
         'X-Amz-Signature': qres.signiture,
-      
+
         file: fs.createReadStream(filename),
       };
 
@@ -73,13 +71,13 @@ export class AWSPost {
       return new Promise((resolve, reject) => {
         request.post({
           url: 'http://production-us-east-1.quobject.io.s3.amazonaws.com/',
-          formData: formData,
-          proxy: 'http://127.0.0.1:8888'
+          formData,
+          proxy: 'http://127.0.0.1:8888',
         }, (err, httpResponse, body) => {
           if (err) {
             console.error('upload failed:', err);
             reject(err);
-            return; 
+            return;
           }
           console.log('Upload successful!  Server responded with:', body);
           resolve(body);

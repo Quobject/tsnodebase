@@ -1,4 +1,4 @@
-﻿import { AWSPost } from './index';
+﻿ import { AWSPost } from './index';
 
 describe('A suite', () => {
   it('contains spec with an expectation', () => {
@@ -15,7 +15,6 @@ Promise.resolve().then(() => {
   console.log('ready');
   done();
 });
-
 
   });
 });
