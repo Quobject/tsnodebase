@@ -7,6 +7,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "test": "nodemon --watch ./lib ./spec/runjasmine.js",
     "reload": "reload -d ./spec/results report.html",
+    "clean": "rm -rf lib",
     "compile": "tsc && node lib/index.js",
     "dev": "concurrently --kill-others \"tsc -w\" \"nodemon ./lib/index.js\"",
     "crunch": "concurrently --kill-others \"npm run dev\" \"npm run test\" \"npm run reload\""
