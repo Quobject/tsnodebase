@@ -1,6 +1,6 @@
 {
   "name": "tsnodebase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "private": true,
   "license": "MIT",
@@ -11,9 +11,9 @@
   "main": "./dist/main.js",
   "scripts": {
     "clean": "./node_modules/.bin/del ./dist/",
-    "lint": "tslint --project .",
-    "compile": "tsc",
-    "crunch": "./node_modules/.bin/parallelshell \"tsc -w\" \"./node_modules/.bin/jasmine-node ./dist/ --autotest --verbose --junitreport --output ./spec/reports/ --watch ./dist/\" \"./node_modules/.bin/xunit-viewer --watch --title=tsnodebase --results=./spec/reports/ --output=./spec/result/index.html\" \"./node_modules/.bin/reload -p 8081 -d  ./spec/result/ index.html\"",
+    "lint": "./node_modules/.bin/tslint --project .",
+    "compile": "./node_modules/.bin/tsc",
+    "crunch": "./node_modules/.bin/parallelshell \"tsc -w\" \"./node_modules/.bin/jasmine-node ./dist/ --autotest --verbose --junitreport --output ./spec/reports/ --watch ./dist/\" \"./node_modules/.bin/xunit-viewer --watch --title=tsnodebase --results=./spec/reports/ --output=./spec/result/index.html\" \"./node_modules/.bin/reload -p 8080 -d  ./spec/result/ index.html\"",
     "build": "npm run lint && npm run clean && npm run compile",
     "test": "npm run build && ./node_modules/.bin/jasmine-node ./dist/ --verbose"
   },
@@ -28,5 +28,7 @@
     "typescript": "^3.0.1",
     "xunit-viewer": "^5.1.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "boscode": "0.0.7"
+  }
 }
