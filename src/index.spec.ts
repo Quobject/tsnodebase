@@ -1,22 +1,9 @@
 /* tslint:disable:no-unused-variable */
+import { add } from './index';
 
-//import { Busymanager } from './busymanager';
-
-describe('Busymanager', () => {
-    beforeEach(() => {
-        //TestBed.configureTestingModule({
-        //  providers: [ConfigService]
-        //});
-    });
-
-    //it('should create instance', () => {
-    //    const busyManager = new Busymanager();
-
-    //    expect(busyManager).toBeTruthy();
-    //    expect(busyManager.busy).toBeTruthy();
-    //    expect(busyManager.message).toBe('');
-    //});
-
-   
-
+describe('My program', () => {
+  it('should add', () => {
+    const testObject = add(3, 4);
+    expect(testObject).toBe(7);
+  });
 });
