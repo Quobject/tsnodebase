@@ -4,6 +4,11 @@
     "version": "2.0.0",
     "tasks": [
       {
+        "type": "npm",
+        "script": "test",
+        "problemMatcher": []
+      },
+      {
         "type": "typescript",
         "tsconfig": "tsconfig.json",
         "problemMatcher": [
@@ -17,6 +22,11 @@
         "problemMatcher": [
           "$tsc-watch"
         ]
+      },
+      {
+        "type": "npm",
+        "script": "build",
+        "problemMatcher": []
       }
     ]
 }

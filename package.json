@@ -11,9 +11,9 @@
   "scripts": {
     "clean": "npx del dist",
     "lint": "npx tslint --project .",
+    "test": "npm run build && npx jasmine",
     "compile": "npx tsc",
-    "build": "npm run lint && npm run clean && npm run compile",
-    "test": "npm run build && npx jasmine"
+    "build": "npm run lint && npm run clean && npm run compile"
   },
   "devDependencies": {
     "@types/jasmine": "3.3.5",
