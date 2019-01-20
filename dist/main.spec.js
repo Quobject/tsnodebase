@@ -6,13 +6,9 @@ describe('MyApi getName function return value', () => {
         const myapi = new main_1.MyApi();
         expect(myapi.getName()).toBeDefined('The function getName() should be defined.');
     });
-    it("Should't return blank.", () => {
-        const myapi = new main_1.MyApi();
-        expect(myapi.getName()).not.toMatch('', 'The function getName() should return the name.');
-    });
     it("Should return 'MyName'", () => {
         const myapi = new main_1.MyApi();
-        expect(myapi.getName()).toMatch('MyName1');
+        expect(myapi.getName()).toBe('tsnodebase');
     });
 });
 //# sourceMappingURL=main.spec.js.map

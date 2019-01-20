@@ -1,34 +1,37 @@
 {
-  "name": "tsnodebase",
-  "version": "1.0.0",
-  "description": "",
-  "license": "MIT",
-  "author": {
-    "name": "Matthias Ludwig",
-    "email": "mludwig@quobject.io"
-  },
-  "main": "./dist/main.js",
-  "scripts": {
-    "clean": "npx del dist",
-    "lint": "npx tslint --project .",
-    "test": "npm run build && npx jasmine",
-    "compile": "npx tsc",
-    "build": "npm run lint && npm run clean && npm run compile"
-  },
-  "devDependencies": {
-    "@types/jasmine": "3.3.5",
-    "@types/del": "^3.0.1",
-    "del-cli": "1.1.0",
-    "npm-run-all": "^4.1.5",
-    "ts-node": "7.0.1",
-    "tslint": "5.12.0",
-    "typescript": "3.2.2",
-    "del": "^3.0.0",
-    "jasmine": "3.3.1",
-    "jasmine-reporters": "^2.3.2",
-    "jasmine-ts-console-reporter": "^3.1.1"
-  },
-  "dependencies": {
-    "npx": "^10.2.0"
-  }
+    "name": "tsnodebase",
+    "version": "2.0.0",
+    "description": "Typescript starter project, with testing and debugging",
+    "license": "MIT",
+    "author": {
+        "name": "Matthias Ludwig",
+        "email": "mludwig@quobject.io"
+    },
+    "main": "./dist/main.js",
+    "scripts": {
+        "clean": "npx del dist",
+        "lint": "npx tslint --project .",
+        "compile": "npx tsc",
+        "build": "npm run lint && npm run clean && npm run compile",
+        "test": "npm run build && npx jasmine",
+        "app": "npm run compile && node \"./dist/main.js\" ",
+        "crunch": "chokidar \"src/**/*.*\" -c \"npm run test\" --silent=true"
+    },
+    "devDependencies": {
+        "@types/jasmine": "3.3.5",
+        "@types/del": "^3.0.1",
+        "del-cli": "1.1.0",
+        "npm-run-all": "^4.1.5",
+        "ts-node": "7.0.1",
+        "tslint": "5.12.0",
+        "typescript": "3.2.2",
+        "del": "^3.0.0",
+        "jasmine": "3.3.1",
+        "jasmine-reporters": "^2.3.2",
+        "jasmine-ts-console-reporter": "^3.1.1",
+        "boscode": "0.0.7",
+        "chokidar-cli": "^1.2.1",
+        "npx": "^10.2.0"
+    },
+    "dependencies": {}
 }

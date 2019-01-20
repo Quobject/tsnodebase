@@ -8,6 +8,6 @@
     "request": "launch",
     "name": "Launch Program",
     "program": "${workspaceFolder}\\dist\\main.js",
-    "args": ["noekfe"]
+    "args": ["argument 1"]
   }]
 }
