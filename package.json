@@ -1,8 +1,7 @@
 {
   "name": "tsnodebase",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "",
-  "private": true,
   "license": "MIT",
   "author": {
     "name": "Matthias Ludwig",
@@ -10,25 +9,8 @@
   },
   "main": "./dist/main.js",
   "scripts": {
-    "clean": "./node_modules/.bin/del ./dist/",
-    "lint": "./node_modules/.bin/tslint --project .",
-    "compile": "./node_modules/.bin/tsc",
-    "crunch": "./node_modules/.bin/parallelshell \"tsc -w\" \"./node_modules/.bin/jasmine-node ./dist/ --autotest --verbose --junitreport --output ./spec/reports/ --watch ./dist/\" \"./node_modules/.bin/xunit-viewer --watch --title=tsnodebase --results=./spec/reports/ --output=./spec/result/index.html\" \"./node_modules/.bin/reload -p 8080 -d  ./spec/result/ index.html\"",
-    "build": "npm run lint && npm run clean && npm run compile",
-    "test": "npm run build && ./node_modules/.bin/jasmine-node ./dist/ --verbose"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "@types/jasmine": "^2.8.3",
-    "@types/node": "10.9.2",
-    "del-cli": "^1.1.0",
-    "jasmine-node": "^1.15.0",
-    "parallelshell": "^3.0.2",
-    "reload": "^2.3.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1",
-    "xunit-viewer": "^5.1.6"
-  },
-  "dependencies": {
-    "boscode": "0.0.7"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
