@@ -9,6 +9,6 @@ exports.MyApi = MyApi;
 process.argv.forEach(function (val, index, array) {
     console.log(index + ': ' + val);
 });
-const t = 9;
+const t = 10;
 console.log(t);
 //# sourceMappingURL=main.js.map
