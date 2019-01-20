@@ -1,8 +1,8 @@
 export class MyApi {
   public getName(): string {
-    return "";
+    return '';
   }
 }
 
-const t = 5;
+const t = 7;
 console.log(t);

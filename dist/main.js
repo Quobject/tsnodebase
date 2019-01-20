@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class MyApi {
     getName() {
-        return "";
+        return '';
     }
 }
 exports.MyApi = MyApi;
-const t = 5;
+const t = 7;
 console.log(t);
 //# sourceMappingURL=main.js.map
